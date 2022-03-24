@@ -1,7 +1,80 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #FFFCFA;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$font-size-base: 1rem;
+$line-height-base: 1;
+
+// colors
+$bg-white: #FFFCFA;
+$greenlight: #A8C12E;
+$yellow:#E5B354;
+$greendark: #697D3E;
+$brown: #28180B;
+
+#login-btn {
+    font-weight: bold;
+    text-align: center;
+    background-color: $greenlight;
+    color: $bg-white;
+    font-size: 0,7rem;
+}
+
+#register-btn {
+    font-weight: bold;
+    text-align: center;
+    background-color: $greenlight;
+    color: $bg-white;
+}
+
+#login-name {
+    color: #000000;
+}
+
+#navbar2 {
+    background-color: #FFFCFA;
+}
+
+.navbar-text {
+    font-size: 5em !important;
+}
+
+
+#socialmediabar {
+    background-color: $greenlight;
+}
+
+
+#save-btn {
+    font-weight: bold;
+    text-align: center;
+    background-color: $greenlight;
+    color: $bg-white;
+}
+
+/* 1 columna para smartphones */
+breakpoint  {
+    max-width: 100%;
+    display: inline-block;
+    }
+    /* 2 columnas para tablets */
+    @media (min-width: 420px) {
+    breakpoint  {
+    max-width: 48%;
+    }
+    }
+    /* 4 columnas para grandes dispositivos*/
+    @media (min-width: 760px) {
+    breakpoint  {
+    max-width: 24%;
+    }
+    }
+
+
+#footer {
+    color: $bg-white;
+    background-color: $greenlight;
+    font-size: 1.3em;
+    font-weight: bold;
+}

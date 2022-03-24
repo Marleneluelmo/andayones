@@ -1,0 +1,1 @@
+formulario que tendrá los datos en comun de create y edit
