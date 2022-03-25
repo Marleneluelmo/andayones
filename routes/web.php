@@ -39,7 +39,7 @@ Route::get('/aboutus', [App\Http\Controllers\AboutusController::class, 'index'])
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contacto');
 
 
-//adminrutas
+//adminrutasroutes
 // Route::resource('routes', RoutesController::class);
 //muestra el listado de rutas
 Route::get('/routes', [App\Http\Controllers\RoutesController::class, 'index'])->name('routes.index');
@@ -54,6 +54,10 @@ Route::get('/routes/{route}/edit', [App\Http\Controllers\RoutesController::class
 Route::put('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'update'])->name('routes.update');
 
 Route::delete('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'destroy'])->name('routes.destroy');
+
+
+//adminrutasroutesDetail
+Route::get('/routesdetails', [App\Http\Controllers\RoutesDetailsController::class, 'index'])->name('routesdetails.index');
 
 
 // Route::middleware(['auth', 'isAdmin'])->group(function () {

@@ -16,10 +16,14 @@ return new class extends Migration
         Schema::create('routes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('image');
+            $table->string('altitude');
             $table->string('distance');
             $table->string('elevationgain');
+            $table->string('time');
             $table->string('difficulty');
+            $table->string('location');
+            $table->string('description');
+            $table->string('image');
             $table->timestamps();
         });
     }

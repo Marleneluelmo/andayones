@@ -1,5 +1,5 @@
 @extends('layouts.template')
 
 @section('content')
-<x-cardroutes />
+<x-card-routes :routes="$routes"/>
 @endsection

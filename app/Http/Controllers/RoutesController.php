@@ -31,10 +31,14 @@ class RoutesController extends Controller
 
         $route = new Route();
         $route->name = $request->name;
-        $route->image = $request->image;
+        $route->altitude = $request->altitude;
         $route->distance = $request->distance;
         $route->elevationgain = $request->elevationgain;
+        $route->time = $request->time;
         $route->difficulty = $request->difficulty;
+        $route->location = $request->location;
+        $route->description = $request->description;
+        $route->image = $request->image;
 
         if($request->hasFile('image')){
             $route['image']=$request->File('image')->store('storage','public');
@@ -59,18 +63,19 @@ class RoutesController extends Controller
         return view('routes.edit', compact('route'));
     }
     
-
-
-
 //modifica un registro ...PUT
     public function update(Request $request, Route $route)
     {
         $route->name = $request->name;
-        $route->image = $request->image;
+        $route->altitude = $request->altitude;
         $route->distance = $request->distance;
         $route->elevationgain = $request->elevationgain;
+        $route->time = $request->time;
         $route->difficulty = $request->difficulty;
-
+        $route->location = $request->location;
+        $route->description = $request->description;
+        $route->image = $request->image;
+        
         $route->save();
         return redirect()->route('routes.index', $route);
     }

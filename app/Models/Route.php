@@ -9,12 +9,18 @@ class Route extends Model
 {
     use HasFactory;
 
+    protected $table = 'routes';
+
     protected $fillable = [
         'name',
         'image',
+        'altitude',
         'distance',
         'elevationgain',
+        'time',
         'difficulty',
+        'location',
+        'description',
     ];
 }
 
