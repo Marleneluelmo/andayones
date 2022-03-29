@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Route;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\DB;
 
@@ -11,10 +12,13 @@ class CardRoutes extends Component
      * Create a new component instance.
      *
      * @return void
+     * 
+     * 
      */
-    public function __construct()
+    public $route;
+    public function __construct($route)
     {
-        //
+        $this->route=$route;
     }
 
     /**
@@ -24,8 +28,9 @@ class CardRoutes extends Component
      */
     public function render()
     {
-        $routes = DB::select('select * from routes');
-        return view('components.card-routes', ['routes' => $routes]);
+        // $routes = Route::select('name')->where('id', '=', $id)->first();
+
+        return view('components.card-routes');
     }
 
 }

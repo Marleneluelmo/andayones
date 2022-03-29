@@ -1,11 +1,10 @@
 <div>
-@foreach ($routes as $route)
- 
+
 <div class="card mb-5 mt-5" style="width: 19rem;">
  
-  <img src="{{ $route->image }}" class="card-img-top rounded-3" alt="cantu cabroneru">
+  <img src="{{ asset('storage/'.$route->image) }}" class="card-img-top rounded-3">
   <div class="card-body">
-    <div class="d-flex justify-content-center mb-4 fs-3 fw-bold">{{ $route->name }}</div>
+    <div class="d-flex justify-content-center mb-4 fs-4 fw-bold">{{ $route->name }}</div>
     <!-- <div class="d-flex justify-content-between"> -->
  
     <div class="d-flex flex-column">
@@ -16,6 +15,4 @@
   </div>
 </div>
  
-</div>
-@endforeach
 </div>

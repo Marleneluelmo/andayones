@@ -8,10 +8,12 @@ use App\Models\Route;
 class RoutesController extends Controller
 {
 
+    
+
 //muestra listado de registros...GET
     public function index()
     {
-        $routes = Route::orderBy("id", "desc")->paginate(5);
+        $routes = Route::orderBy("id", "desc")->paginate(6);
         return view('routes.index', compact('routes'));  //puedo usar la $routes en la vista index
     }
 
@@ -75,8 +77,13 @@ class RoutesController extends Controller
         $route->location = $request->location;
         $route->description = $request->description;
         $route->image = $request->image;
+
+        if($request->hasFile('image')){
+            $route['image']=$request->File('image')->store('storage','public');
+        }
         
         $route->save();
+        
         return redirect()->route('routes.index', $route);
     }
 
