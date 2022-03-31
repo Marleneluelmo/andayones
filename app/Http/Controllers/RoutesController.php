@@ -8,8 +8,6 @@ use App\Models\Route;
 class RoutesController extends Controller
 {
 
-    
-
 //muestra listado de registros...GET
     public function index()
     {

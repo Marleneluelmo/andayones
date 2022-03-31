@@ -1,4 +1,5 @@
 <div>
+<a href="/routesdetails/{{ $route->id }}">
 
 <div class="card mb-5 mt-5" style="width: 19rem;">
  
@@ -13,6 +14,11 @@
       <p class="text-muted fs-6 fw-bold">Dificultad {{ $route->difficulty }} </p>
     </div>
   </div>
+  <div class="d-flex justify-content-end">
+  <i id="heart" class="fa-solid fa-heart me-3 mb-3"></i>
+  </div>
+
 </div>
+</a>
  
 </div>

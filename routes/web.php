@@ -39,9 +39,14 @@ Route::get('/aboutus', [App\Http\Controllers\AboutusController::class, 'index'])
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contacto');
 
 
+
+//detalle de rutas
+Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController::class, 'show'])->name('routesdetails');
+// Route::get('/routesdetails', [App\Http\Controllers\RoutesDetailsController::class, 'index'])->name('routesdetails.index');
+
 //adminrutasroutes
 // Route::resource('routes', RoutesController::class);
-//muestra el listado de rutas
+//muestra el listado de rutas CRUD
 Route::get('/routes', [App\Http\Controllers\RoutesController::class, 'index'])->name('routes.index');
 //muestra el formulario y envia los datos
 Route::get('/routes/create', [App\Http\Controllers\RoutesController::class, 'create'])->name('routes.create');
@@ -56,8 +61,7 @@ Route::put('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'up
 Route::delete('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'destroy'])->name('routes.destroy');
 
 
-//adminrutasroutesDetail
-Route::get('/routesdetails', [App\Http\Controllers\RoutesDetailsController::class, 'index'])->name('routesdetails.index');
+
 
 
 // Route::middleware(['auth', 'isAdmin'])->group(function () {

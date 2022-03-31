@@ -13,6 +13,36 @@ $yellow:#E5B354;
 $greendark: #697D3E;
 $brown: #28180B;
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0; 
+    border-style: none; 
+    text-decoration: none;
+    box-sizing: 0;
+    -webkit-box-sizing: 0;
+    border-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    font-weight: 400 !important;
+}
+svg {
+    width: inherit;
+    height: inherit;
+}
+
+a {
+    margin: 0;
+    padding:0;
+    border-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border: 0; 
+    border-style: none; 
+    text-decoration: none;
+}
+
+
 #login-btn {
     font-weight: bold;
     text-align: center;
@@ -78,3 +108,8 @@ breakpoint  {
     font-size: 1.3em;
     font-weight: bold;
 }
+
+.heart {
+    background-color: $greendark;
+}
+
