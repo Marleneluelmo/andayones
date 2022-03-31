@@ -15,7 +15,7 @@ class RoutesDetailsController extends Controller
     public function show($id)
     {
         $route = Route::find($id);
-        return view('routes.show', compact('route'));
+        return view('routesdetails', compact('route'));
     }
 
 }
