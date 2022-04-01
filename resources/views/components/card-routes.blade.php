@@ -14,11 +14,12 @@
       <p class="text-muted fs-6 fw-bold">Dificultad {{ $route->difficulty }} </p>
     </div>
   </div>
+  </a>
   <div class="d-flex justify-content-end">
-  <i id="heart" class="fa-solid fa-heart me-3 mb-3"></i>
+  <i id="heart" class="fas fa-heart me-3 mb-3"></i>
   </div>
 
 </div>
-</a>
+
  
 </div>
