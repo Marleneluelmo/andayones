@@ -24,16 +24,18 @@ class FavouritesController extends Controller
 
     public function store($routeID)
     {
+        
         $route = Route::where('id', '=', $routeID)->first();
 
+        //al onclick si no está el usuario en la db de la pivot....(metodo users del modelo Route. Dentro de los usuarios de esta ruta quien esta en la tabla pivot)
         if( !$route->users->contains( Auth::user()->id ) ){
-
+        //si no esta en la pivot incluye el usuario que esta logueado
             $route->users()->attach( Auth::user()->id, [
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
                 ] );         
         }
-
+        //si está en la db de la pivot lo borra
         else {$route->users()->detach( Auth::user()->id, [
             'created_at'    => date('Y-m-d H:i:s'),
             'updated_at'    => date('Y-m-d H:i:s')
@@ -47,8 +49,3 @@ class FavouritesController extends Controller
     }
 
 }
-
-
-// <span class="like-btn">
-//     <i id="like{{$post->id}}" class="glyphicon glyphicon-heart {{ $post->favoriters()->count() > 0  ? 'like-post' : '' }}"></i>
-// </span>
