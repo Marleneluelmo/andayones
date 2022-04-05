@@ -22,5 +22,11 @@ class Route extends Model
         'location',
         'description',
     ];
+
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+      }
+      
 }
 

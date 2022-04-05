@@ -24,9 +24,9 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 
 
-Route::get('admin',function(){
-    return view('admin');
-})->middleware("isAdmin");
+// Route::get('admin',function(){
+//     return view('admin');
+// })->middleware("isAdmin");
 
 
 //home y  navbar
@@ -43,6 +43,19 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 //detalle de rutas
 Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController::class, 'show'])->name('routesdetails');
 // Route::get('/routesdetails', [App\Http\Controllers\RoutesDetailsController::class, 'index'])->name('routesdetails.index');
+
+
+//favoritos
+
+Route::get('/rutas/{id}/fav', [App\Http\Controllers\FavouritesController::class, 'store'])->name('fav');
+
+
+// Route::middleware('auth')->group(function () {
+    
+//     Route::delete('/routes/{id}/unfav', [App\Http\Controllers\RoutesController::class, 'unfav')->name('unfav');
+// });
+
+
 
 //adminrutasroutes
 // Route::resource('routes', RoutesController::class);

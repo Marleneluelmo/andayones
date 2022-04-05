@@ -13,8 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('favs', function (Blueprint $table) {
+        Schema::create('route_user', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('route_id');
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('route_id')->references('id')->on('routes')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('favs');
+        Schema::dropIfExists('route_user');
     }
 };

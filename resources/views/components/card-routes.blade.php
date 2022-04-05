@@ -16,8 +16,11 @@
   </div>
   </a>
   <div class="d-flex justify-content-end">
+  <a href="/rutas/{{$route->id}}/fav">
   <i id="heart" class="fas fa-heart me-3 mb-3"></i>
+  </a>
   </div>
+
 
 </div>
 
