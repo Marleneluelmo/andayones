@@ -11282,6 +11282,38 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+#greenlightcolor {
+  color: #A8C12E;
+}
+
+#greendarkcolor {
+  color: #697D3E;
+}
+
+#browncolor {
+  color: #28180B;
+}
+
+#blacklightcolor {
+  color: #666666;
+}
+
+#picradius {
+  border-radius: 10px;
+}
+
+#shadow {
+  color: #666666;
+  border-radius: 10px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+#shadowdetail {
+  color: #666666;
+  border-radius: 10px;
+  box-shadow: 8px 8px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;

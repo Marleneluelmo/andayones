@@ -18,6 +18,9 @@ class FavouritesController extends Controller
     public function index()
     {
      
+        $routes = Route::orderBy("id", "desc")->paginate(6);
+        return view('routesfavourites', compact('routes'));
+
     }
 
 
@@ -43,9 +46,6 @@ class FavouritesController extends Controller
 
         return redirect()->back();
         //If the user doesn't already favourited the route, attaches the route to the user's favs
-    
-       
-
     }
 
 }

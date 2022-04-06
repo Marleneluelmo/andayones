@@ -12,6 +12,39 @@ $greenlight: #A8C12E;
 $yellow:#E5B354;
 $greendark: #697D3E;
 $brown: #28180B;
+$blacklight: #666666;
+
+
+#greenlightcolor {
+    color: $greenlight;;
+}
+
+#greendarkcolor {
+    color: $greendark;
+}
+
+#browncolor {
+    color: $brown;
+}
+
+#blacklightcolor {
+    color: $blacklight;
+}
+#picradius {
+    border-radius: 10px;
+}
+
+#shadow {
+    color: $blacklight;
+    border-radius: 10px;
+    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+#shadowdetail {
+    color: $blacklight;
+    border-radius: 10px;
+    box-shadow: 8px 8px 6px 0 rgba(0, 0, 0, 0.20);
+}
 
 * {
     margin: 0;
@@ -43,6 +76,9 @@ a {
 }
 
 
+
+
+
 #login-btn {
     font-weight: bold;
     text-align: center;
@@ -61,6 +97,8 @@ a {
 #login-name {
     color: #000000;
 }
+
+
 
 #navbar2 {
     background-color: #FFFCFA;

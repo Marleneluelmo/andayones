@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Redirect;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
@@ -46,7 +46,7 @@ Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController:
 
 
 //favoritos
-
+Route::get('/rutas/{id}/fav', [App\Http\Controllers\FavouritesController::class, 'index'])->name('fav');
 Route::get('/rutas/{id}/fav', [App\Http\Controllers\FavouritesController::class, 'store'])->name('fav');
 
 

@@ -57,7 +57,7 @@
     <header>
 
         <div>
-            <div class="d-flex align-items-center justify-content-center py-3 container">
+            <div class="d-flex align-items-center justify-content-center mb-3 container">
 
                 <div>
                     <div class="me-5">
