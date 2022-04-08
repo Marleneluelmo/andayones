@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Route;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class FavouritesController extends Controller
@@ -17,13 +18,21 @@ class FavouritesController extends Controller
 
     public function index()
     {
-     
-        $routes = Route::orderBy("id", "desc")->paginate(6);
+        $user = Auth::user();
+        $routes = array ();
+
+        foreach($user->routes as $fav_route)
+        {
+            //busca en la pivot el id de la ruta
+           $route_id = $fav_route->pivot->route_id; // Correctly gets the route_id
+           //busca ese id en la table rutas y devuelve la ruta entera con todos los datos
+           $fav_route = Route::where('id', '=', $route_id)->first();
+           array_push($routes, $fav_route); 
+        }
+
         return view('routesfavourites', compact('routes'));
 
     }
-
-
 
     public function store($routeID)
     {

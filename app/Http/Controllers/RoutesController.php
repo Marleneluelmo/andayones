@@ -8,6 +8,12 @@ use App\Models\Route;
 class RoutesController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('isAdmin');
+    }
+
+
 //muestra listado de registros...GET
     public function index()
     {

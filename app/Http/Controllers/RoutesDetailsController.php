@@ -7,10 +7,6 @@ use App\Models\Route;
 
 class RoutesDetailsController extends Controller
 {
-    public function index(){
-
-        return view('routesdetails');
-    }
 
     public function show($id)
     {

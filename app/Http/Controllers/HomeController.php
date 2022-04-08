@@ -26,7 +26,7 @@ class HomeController extends Controller
     {
         // dd(Auth::user()->roles[0]->name);
         if (Auth::user()->roles[0]->name == 'Admin')   
-            return view('home');
+            return view('adminhome');
 
         return view('welcome');
     }

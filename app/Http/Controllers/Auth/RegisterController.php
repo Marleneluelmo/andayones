@@ -64,10 +64,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+
+        //recoge los datos ($data) del register.blade.php de view auth
+        //los guarda en la variable $user para poder después darle un rol
+        //esto no viene por defecto
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        //le damos a esa variable el rol 2 que le habíamos asignado al rol de user de la tabla roles
+        //con attach lo guarda en la pivot
+        $user->roles()->attach(2);
+        return $user;
     }
 }

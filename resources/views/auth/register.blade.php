@@ -8,6 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                    <!-- recoge datos introducidos, los lleva al RegisterController donde se le asigna rol -->
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

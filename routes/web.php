@@ -46,19 +46,18 @@ Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController:
 
 
 //favoritos
-Route::get('/rutas/{id}/fav', [App\Http\Controllers\FavouritesController::class, 'index'])->name('fav');
-Route::get('/rutas/{id}/fav', [App\Http\Controllers\FavouritesController::class, 'store'])->name('fav');
+Route::get('/rutas/favoritos', [App\Http\Controllers\FavouritesController::class, 'index'])->name('fav.index');
+Route::get('/rutas/{id}/favoritos/store', [App\Http\Controllers\FavouritesController::class, 'store'])->name('favstore');
 
 
 // Route::middleware('auth')->group(function () {
     
-//     Route::delete('/routes/{id}/unfav', [App\Http\Controllers\RoutesController::class, 'unfav')->name('unfav');
+// Route::delete('/routes/{id}/unfav', [App\Http\Controllers\RoutesController::class, 'unfav')->name('unfav');
 // });
 
 
 
 //adminrutasroutes
-// Route::resource('routes', RoutesController::class);
 //muestra el listado de rutas CRUD
 Route::get('/routes', [App\Http\Controllers\RoutesController::class, 'index'])->name('routes.index');
 //muestra el formulario y envia los datos

@@ -1,8 +1,10 @@
 @extends('layouts.template')
 
 @section('content')
+<div>
+    <p>Favoritos</p>
+</div>
 
-<p>Favoritos</p>
 
 <div class="d-flex flex-wrap justify-content-around me-5 ms-5">
 @foreach ($routes as $route)
@@ -15,8 +17,6 @@
 
 <!-- paginación -->
 
-<div id="greenlightcolor" class="d-flex justify-content-center pb-0">
-    {{$routes->links()}}
-</div>
+
 
 @endsection
