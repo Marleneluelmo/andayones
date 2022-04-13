@@ -11360,31 +11360,12 @@ a {
   transform: scale(1.05);
 }
 
-#login-btn {
-  font-weight: bold;
-  text-align: center;
-  background-color: #A8C12E;
-  color: #FFFCFA;
-  font-size: 0, 7rem;
-}
-
-#register-btn {
-  font-weight: bold;
-  text-align: center;
-  background-color: #A8C12E;
-  color: #FFFCFA;
-}
-
 #login-name {
   color: #000000;
 }
 
 #navbar2 {
   background-color: #FFFCFA;
-}
-
-.navbar-text {
-  font-size: 5em !important;
 }
 
 #socialmediabar {
@@ -11398,24 +11379,6 @@ a {
   color: #FFFCFA;
 }
 
-/* 1 columna para smartphones */
-breakpoint {
-  max-width: 100%;
-  display: inline-block;
-}
-
-/* 2 columnas para tablets */
-@media (min-width: 420px) {
-  breakpoint {
-    max-width: 48%;
-  }
-}
-/* 4 columnas para grandes dispositivos*/
-@media (min-width: 760px) {
-  breakpoint {
-    max-width: 24%;
-  }
-}
 #footer {
   color: #FFFCFA;
   background-color: #A8C12E;

@@ -58,7 +58,7 @@
           <label for="exampleFormControlTextarea1">Descripcion</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="description"></textarea>
         </div>
-
+        <!-- botón que guarda la ruta -->
         <button type="submit" id="save-btn" class="btn btn-primary mt-5 me-2 rounded-pill">Save</button>
     </form>
   </div>

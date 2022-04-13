@@ -22,15 +22,9 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
-
-
-// Route::get('admin',function(){
-//     return view('admin');
-// })->middleware("isAdmin");
-
-
-//home y  navbar
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Navbar
 Route::get('/rutas', [App\Http\Controllers\RutasController::class, 'index'])->name('rutas');
 Route::get('/picos', [App\Http\Controllers\PicosController::class, 'index'])->name('picos');
 Route::get('/ferrata', [App\Http\Controllers\FerrataController::class, 'index'])->name('ferrata');
@@ -42,19 +36,11 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 
 //detalle de rutas
 Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController::class, 'show'])->name('routesdetails');
-// Route::get('/routesdetails', [App\Http\Controllers\RoutesDetailsController::class, 'index'])->name('routesdetails.index');
 
 
 //favoritos
 Route::get('/rutas/favoritos', [App\Http\Controllers\FavouritesController::class, 'index'])->name('fav.index');
 Route::get('/rutas/{id}/favoritos/store', [App\Http\Controllers\FavouritesController::class, 'store'])->name('favstore');
-
-
-// Route::middleware('auth')->group(function () {
-    
-// Route::delete('/routes/{id}/unfav', [App\Http\Controllers\RoutesController::class, 'unfav')->name('unfav');
-// });
-
 
 
 //adminrutasroutes
@@ -71,6 +57,10 @@ Route::get('/routes/{route}/edit', [App\Http\Controllers\RoutesController::class
 Route::put('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'update'])->name('routes.update');
 
 Route::delete('/routes/{route}', [App\Http\Controllers\RoutesController::class, 'destroy'])->name('routes.destroy');
+
+
+
+
 
 
 

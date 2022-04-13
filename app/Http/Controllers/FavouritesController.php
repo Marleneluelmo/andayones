@@ -9,13 +9,15 @@ use Illuminate\Support\Facades\Auth;
 
 class FavouritesController extends Controller
 {
+
+    //tiene que estar logueado para tener favoritos
     public function __construct()
     {
         $this->middleware('auth');
     }
 
 
-
+    //ver favoritos
     public function index()
     {
         $user = Auth::user();
@@ -39,15 +41,15 @@ class FavouritesController extends Controller
         
         $route = Route::where('id', '=', $routeID)->first();
 
-        //al onclick si no está el usuario en la db de la pivot....(metodo users del modelo Route. Dentro de los usuarios de esta ruta quien esta en la tabla pivot)
+        //al onclick si ese usuario no está en la pivot route-users, que relaciona usuarios con rutas (favoritos)....(metodo users del modelo Route. Dentro de los usuarios de esta ruta quien esta en la tabla pivot)
         if( !$route->users->contains( Auth::user()->id ) ){
-        //si no esta en la pivot incluye el usuario que esta logueado
+        //si no está en la pivot lo incluye
             $route->users()->attach( Auth::user()->id, [
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s')
                 ] );         
         }
-        //si está en la db de la pivot lo borra
+        //si está en la pivot lo borra (ya era favorito pero al click se quita de favorito)
         else {$route->users()->detach( Auth::user()->id, [
             'created_at'    => date('Y-m-d H:i:s'),
             'updated_at'    => date('Y-m-d H:i:s')

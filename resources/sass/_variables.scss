@@ -34,6 +34,7 @@ $blacklight: #666666;
 #blacklightcolor {
     color: $blacklight;
 }
+
 #picradius {
     border-radius: 10px;
 }
@@ -57,6 +58,7 @@ $blacklight: #666666;
     border-top-left-radius: 0;
     font-weight: 400 !important;
 }
+
 svg {
     width: inherit;
     height: inherit;
@@ -92,33 +94,14 @@ a {
     transform:scale(1.05);
 }
 
-#login-btn {
-    font-weight: bold;
-    text-align: center;
-    background-color: $greenlight;
-    color: $bg-white;
-    font-size: 0,7rem;
-}
-
-#register-btn {
-    font-weight: bold;
-    text-align: center;
-    background-color: $greenlight;
-    color: $bg-white;
-}
 
 #login-name {
     color: #000000;
 }
 
 
-
 #navbar2 {
     background-color: #FFFCFA;
-}
-
-.navbar-text {
-    font-size: 5em !important;
 }
 
 
@@ -134,25 +117,6 @@ a {
     color: $bg-white;
 }
 
-/* 1 columna para smartphones */
-breakpoint  {
-    max-width: 100%;
-    display: inline-block;
-    }
-    /* 2 columnas para tablets */
-    @media (min-width: 420px) {
-    breakpoint  {
-    max-width: 48%;
-    }
-    }
-    /* 4 columnas para grandes dispositivos*/
-    @media (min-width: 760px) {
-    breakpoint  {
-    max-width: 24%;
-    }
-    }
-
-
 #footer {
     color: $bg-white;
     background-color: $greenlight;
@@ -164,3 +128,19 @@ breakpoint  {
     background-color: $greendark;
 }
 
+
+
+// #login-btn {
+//     font-weight: bold;
+//     text-align: center;
+//     background-color: $greenlight;
+//     color: $bg-white;
+//     font-size: 0,7rem;
+// }
+
+// #register-btn {
+//     font-weight: bold;
+//     text-align: center;
+//     background-color: $greenlight;
+//     color: $bg-white;
+// }

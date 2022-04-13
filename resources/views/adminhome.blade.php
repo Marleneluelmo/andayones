@@ -4,6 +4,7 @@
 <div class="d-flex ms-5 mt-5">
 <div class="d-flex flex-column">
   <div class="mb-5">
+    <!-- lleva al crud -->
     <a href="{{route('routes.index')}}" class="btn btn-primary greenlightcolor btn-md">Listado de Rutas</button></a>
   </div>
   <div>
