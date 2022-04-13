@@ -11286,6 +11286,10 @@ textarea.form-control-lg {
   color: #A8C12E;
 }
 
+.greenlightcolor {
+  background-color: #A8C12E;
+}
+
 #greendarkcolor {
   color: #697D3E;
 }
@@ -11300,12 +11304,6 @@ textarea.form-control-lg {
 
 #picradius {
   border-radius: 10px;
-}
-
-#shadow {
-  color: #666666;
-  border-radius: 10px;
-  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 #shadowdetail {
@@ -11342,6 +11340,24 @@ a {
   border: 0;
   border-style: none;
   text-decoration: none;
+}
+
+.card-route {
+  -webkit-transition: all 0.4s ease;
+  /* Safari y Chrome */
+  -moz-transition: all 0.4s ease;
+  /* Firefox */
+  -o-transition: all 0.4s ease;
+  /* IE 4 */
+  -ms-transition: all 0.4s ease;
+  /* Opera */
+  color: #666666;
+  border-radius: 10px;
+  box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-route:hover {
+  transform: scale(1.05);
 }
 
 #login-btn {

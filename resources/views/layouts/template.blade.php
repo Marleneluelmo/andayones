@@ -15,43 +15,6 @@
 
 <body>
 
-    <!-- @guest
-    <div class="d-flex justify-content-end mt-3 me-4">
-
-        @if (Route::has('login'))
-        <div class="me-2">
-            <a href="{{ route('login') }}" type="button" id="login-btn" class="btn rounded-pill">Login</a>
-        </div>
-        @endif
-
-        @if (Route::has('register'))
-        <a href="{{ route('register') }}" type="button" id="register-btn" class="btn rounded-pill">Register</a>
-        @endif
-
-    </div>
-
-    @else
-    <div class="d-flex justify-content-end mt-3 me-4">
-       
-        <div class="me-4">
-            <p>{{ Auth::user()->name }}</p>
-        </div>
-
-
-        <div>
-            <a href="{{ route('logout') }}" type="button" id="login-btn" class="btn rounded-pill" onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-        </div>
-        
-    </div>
-    @endguest -->
-
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white">
             <div class="container">
@@ -214,6 +177,7 @@
         </div>
     </footer>
 
+    <!-- para que la navbar que importamos de bootstrap se despliegue -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
@@ -221,7 +185,42 @@
 </html>
 
 
+    <!-- @guest
+    <div class="d-flex justify-content-end mt-3 me-4">
 
+        @if (Route::has('login'))
+        <div class="me-2">
+            <a href="{{ route('login') }}" type="button" id="login-btn" class="btn rounded-pill">Login</a>
+        </div>
+        @endif
+
+        @if (Route::has('register'))
+        <a href="{{ route('register') }}" type="button" id="register-btn" class="btn rounded-pill">Register</a>
+        @endif
+
+    </div>
+
+    @else
+    <div class="d-flex justify-content-end mt-3 me-4">
+       
+        <div class="me-4">
+            <p>{{ Auth::user()->name }}</p>
+        </div>
+
+
+        <div>
+            <a href="{{ route('logout') }}" type="button" id="login-btn" class="btn rounded-pill" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </div>
+        
+    </div>
+    @endguest -->
 
 <!-- giaco botonrd login -->
 <!-- @if (Route::has('login'))

@@ -1,26 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="d-flex justify-content-center">
+<div class="d-flex ms-5 mt-5">
 <div class="d-flex flex-column">
   <div class="mb-5">
-    <a href="{{route('routes.index')}}" class="btn btn-primary btn-lg">Listado de Rutas</button></a>
+    <a href="{{route('routes.index')}}" class="btn btn-primary greenlightcolor btn-md">Listado de Rutas</button></a>
   </div>
   <div>
   <div class="mb-5">
-    <a href="#" class="btn btn-primary btn-lg">Listado de Picos de Europa</button></a>
+    <a href="#" class="btn btn-primary greenlightcolor btn-md">Listado de Picos de Europa</button></a>
   </div>
   <div>
   <div class="mb-5">
-    <a href="#" class="btn btn-primary btn-lg">Listado de Vias ferratas</button></a>
+    <a href="#" class="btn btn-primary greenlightcolor btn-md">Listado de Vias ferratas</button></a>
   </div>
   <div>
   <div class="mb-5">
-    <a href="#" class="btn btn-primary btn-lg">Listado de Viajes</button></a>
+    <a href="#" class="btn btn-primary greenlightcolor btn-md">Listado de Viajes</button></a>
   </div>
   <div>
   <div class="mb-5">
-    <a href="#" class="btn btn-primary btn-lg">Nosotros</button></a>
+    <a href="#" class="btn btn-primary greenlightcolor btn-md">Nosotros</button></a>
   </div>
 </div>
 </div>

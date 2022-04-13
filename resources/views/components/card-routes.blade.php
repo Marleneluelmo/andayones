@@ -1,7 +1,7 @@
 <div>
   <a href="/routesdetails/{{ $route->id }}">
 
-    <div id="shadow" class="card mb-5 mt-5 me-5 ms-5" style="width: 19rem;">
+    <div class="card card-route mb-5 mt-5 me-5 ms-5" style="width: 19rem;">
 
       <img src="{{ asset('storage/'.$route->image) }}" id="picradius" class="card-img-top">
       <div class="card-body">

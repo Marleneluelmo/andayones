@@ -16,7 +16,11 @@ $blacklight: #666666;
 
 
 #greenlightcolor {
-    color: $greenlight;;
+    color: $greenlight;
+}
+
+.greenlightcolor {
+    background-color: $greenlight;
 }
 
 #greendarkcolor {
@@ -32,12 +36,6 @@ $blacklight: #666666;
 }
 #picradius {
     border-radius: 10px;
-}
-
-#shadow {
-    color: $blacklight;
-    border-radius: 10px;
-    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 #shadowdetail {
@@ -76,8 +74,23 @@ a {
 }
 
 
+.card-route {
+    -webkit-transition:all .4s ease; /* Safari y Chrome */
+    -moz-transition:all .4s ease; /* Firefox */
+    -o-transition:all .4s ease; /* IE 4 */
+    -ms-transition:all .4s ease; /* Opera */
+    color: $blacklight;
+    border-radius: 10px;
+    box-shadow: 4px 8px 8px 0 rgba(0, 0, 0, 0.15);
+}
 
-
+.card-route:hover {
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
 
 #login-btn {
     font-weight: bold;
