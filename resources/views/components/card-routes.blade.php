@@ -1,5 +1,5 @@
 <div>
-  <!-- lleva a la página detalle -->
+  <!-- lleva a la página detalle que la busca en web -->
   <a href="/routesdetails/{{ $route->id }}">
 
     <div class="card card-route mb-5 mt-5 me-5 ms-5" style="width: 19rem;">

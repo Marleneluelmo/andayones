@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appadmin')
 
 @section('content')
 <!-- METODO INDEX muestra la lista de rutas con botón de editar, borrar y añadir-->

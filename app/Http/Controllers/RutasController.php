@@ -11,6 +11,8 @@ class RutasController extends Controller
 
         $routes = Route::orderBy("id", "desc")->paginate(6);
         // $routes = Route::all();
+
+        //la variable $routes va al rutas.blade y tiene todas las rutas
         return view('rutas', ['routes'=>$routes]);
     }
 }

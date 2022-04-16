@@ -18,6 +18,7 @@ class CardRoutes extends Component
     public $route;
     public function __construct($route)
     {
+        //viene de rutas.blade :route
         $this->route=$route;
     }
 

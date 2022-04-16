@@ -34,7 +34,7 @@ Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])
 
 
 
-//detalle de rutas
+//detalle de rutas. el id viene de card-routes linea 3
 Route::get('/routesdetails/{id}', [App\Http\Controllers\RoutesDetailsController::class, 'show'])->name('routesdetails');
 
 

@@ -38,6 +38,24 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         
+                        <li class="nav-item">
+                            <a href="{{route('routes.index')}}" class="nav-link">Rutas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Picos de Europa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Vías Ferrata</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Viajes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">Contacto</a>
+                        </li>
 
                     </ul>
 

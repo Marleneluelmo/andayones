@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.appadmin')
 
 @section('content')
 <div class="d-flex ms-5 mt-5">
 <div class="d-flex flex-column">
   <div class="mb-5">
     <!-- lleva al crud -->
-    <a href="{{route('routes.index')}}" class="btn btn-primary greenlightcolor btn-md">Listado de Rutas</button></a>
+    <!-- <a href="{{route('routes.index')}}" class="btn btn-primary greenlightcolor btn-md">Listado de Rutas</button></a>
   </div>
   <div>
   <div class="mb-5">
@@ -22,7 +22,7 @@
   <div>
   <div class="mb-5">
     <a href="#" class="btn btn-primary greenlightcolor btn-md">Nosotros</button></a>
-  </div>
+  </div> -->
 </div>
 </div>
 @endsection

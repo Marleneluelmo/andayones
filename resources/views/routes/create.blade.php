@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appadmin')
 
 
 <!-- METODO CREATE formulario del admin para crear detalles de una ruta -->
@@ -52,7 +52,7 @@
 
         <div class="form-group mb-4">
           <label for="exampleFormControlFile1">Foto</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image">
+          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" accept="image/*">
         </div>
         <div class="form-group mb-4">
           <label for="exampleFormControlTextarea1">Descripcion</label>
