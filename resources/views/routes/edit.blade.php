@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appadmin')
 
 
 <!-- METODO UPDATE formulario del admin para modificar una ruta -->
